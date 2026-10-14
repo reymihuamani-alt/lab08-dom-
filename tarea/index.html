@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarea - Lista de tareas</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 560px; margin: 30px auto; padding: 0 12px; }
+    form { display: flex; gap: 8px; }
+    #texto, #buscador { flex: 1; padding: 6px; }
+    .error { color: #c0392b; }
+    .ok { color: #1e8449; }
+    .pequeno { font-size: 0.85em; color: #666; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; align-items: center; gap: 8px; padding: 6px; border-bottom: 1px solid #ddd; }
+    li span { flex: 1; cursor: pointer; }
+    li.hecha span { text-decoration: line-through; color: #888; }
+  </style>
+</head>
+<body>
+  <h1>Mi lista de tareas</h1>
+
+  <form id="formTarea">
+    <input id="texto" type="text" placeholder="Nueva tarea" maxlength="60">
+    <button type="submit">Agregar</button>
+  </form>
+  <p id="contadorCaracteres" class="pequeno">0 / 60</p>
+  <p id="mensaje"></p>
+
+  <input id="buscador" type="text" placeholder="Buscar tarea...">
+  <ul id="lista"></ul>
+  <p id="resumen"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
